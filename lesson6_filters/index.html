@@ -8,17 +8,15 @@
 </head>
 <body>
     <main>
-        <h1>{{ reversedMessage }}</h1>
+        <input type="search" v-model="search" placeholder="Search Game: ">
         <ul>
-            <li v-for="task in tasksByAge">
-                {{ task.title }}
+            <li v-for="game in searchGame">
+                {{ game.title }}
             </li>
         </ul>
-        <form v-on:submit.prevent="addTask">
-            <input type="text" placeholder="Introduce your Task " v-model="newTask">
-            <input type="submit" value="Send Task">
-        </form>
+        <input type="range" min="0" max="10" v-model="minimum">
     </main>
+
     <script src="https://unpkg.com/vue@2.3.4"></script>
     <script src="static/js/main.js"></script>
 </body>
