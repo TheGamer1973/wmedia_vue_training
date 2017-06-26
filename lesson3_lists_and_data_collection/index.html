@@ -11,6 +11,19 @@
         <ul>
             <li v-for="day in laborables">{{ day }}</li>
         </ul>
+
+        <ul>
+            <li v-for="(task, index) in tasks">
+                {{ index + 1 }} - {{ task.name }}
+                <small>({{ task.priority }})</small>
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="(value, key, index) in person">
+                {{ index + 1 }} - {{ key | uppercase }} : {{ value | capitalize }}
+            </li>
+        </ul>
     </main>
     <script src="https://unpkg.com/vue@2.3.4"></script>
     <script src="static/js/main.js"></script>
