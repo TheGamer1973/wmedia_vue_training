@@ -1,7 +1,7 @@
 Vue.filter('backwards', (value) => value.split('').reverse().join(''));
 
 // Vue.js
-const vm = new Vue({
+new Vue({
     el: 'main',
     data: {
         search: '',
